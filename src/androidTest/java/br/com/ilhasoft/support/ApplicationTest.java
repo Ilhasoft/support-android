@@ -1,4 +1,4 @@
-package br.com.ilhasoft.ilhaandroid;
+package br.com.ilhasoft.support;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

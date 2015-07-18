@@ -1,4 +1,4 @@
-package br.com.ilhasoft.ilhaandroid.db.business;
+package br.com.ilhasoft.support.db.business;
 
 import com.activeandroid.ActiveAndroid;
 import com.activeandroid.Model;
@@ -6,7 +6,7 @@ import com.activeandroid.query.Select;
 
 import java.util.List;
 
-import br.com.ilhasoft.ilhaandroid.db.repository.AbstractRepository;
+import br.com.ilhasoft.support.db.repository.AbstractRepository;
 
 /**
  * Created by johndalton on 21/10/14.

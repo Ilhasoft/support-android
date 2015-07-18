@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Ring">
+        <attr name="ringStrokeColor" format="color" />
+        <attr name="ringStrokeWidth" format="dimension" />
+        <attr name="ringProgress" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="Pacman">
+        <attr name="pacmanBackgroundColor" format="color" />
+        <attr name="pacmanForegroundColor" format="color" />
+        <attr name="pacmanProgress" format="integer" />
+    </declare-styleable>
+</resources>

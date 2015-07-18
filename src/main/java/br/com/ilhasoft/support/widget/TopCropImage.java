@@ -1,4 +1,4 @@
-package br.com.ilhasoft.ilhaandroid.widget;
+package br.com.ilhasoft.support.widget;
 
 import android.content.Context;
 import android.graphics.Matrix;

@@ -1,4 +1,4 @@
-package br.com.ilhasoft.ilhaandroid.json;
+package br.com.ilhasoft.support.json;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

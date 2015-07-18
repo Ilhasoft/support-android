@@ -1,4 +1,4 @@
-package br.com.ilhasoft.ilhaandroid.preferences;
+package br.com.ilhasoft.support.preferences;
 
 import android.content.Context;
 import android.content.SharedPreferences;

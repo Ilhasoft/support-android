@@ -1,4 +1,4 @@
-package br.com.ilhasoft.ilhaandroid.db.repository;
+package br.com.ilhasoft.support.db.repository;
 
 import java.util.List;
 

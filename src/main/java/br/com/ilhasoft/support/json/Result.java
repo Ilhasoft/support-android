@@ -1,4 +1,4 @@
-package br.com.ilhasoft.ilhaandroid.json;
+package br.com.ilhasoft.support.json;
 
 /**
  * Created by johndalton on 01/12/14.

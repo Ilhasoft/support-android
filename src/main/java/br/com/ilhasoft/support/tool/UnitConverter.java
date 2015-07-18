@@ -1,4 +1,4 @@
-package br.com.ilhasoft.ilhaandroid.tool;
+package br.com.ilhasoft.support.tool;
 
 import android.content.Context;
 import android.util.TypedValue;

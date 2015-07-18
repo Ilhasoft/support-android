@@ -1,4 +1,4 @@
-package br.com.ilhasoft.ilhaandroid.task;
+package br.com.ilhasoft.support.task;
 
 import android.app.Activity;
 import android.os.AsyncTask;

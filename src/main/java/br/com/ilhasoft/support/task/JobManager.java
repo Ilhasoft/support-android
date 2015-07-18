@@ -1,4 +1,4 @@
-package br.com.ilhasoft.ilhaandroid.task;
+package br.com.ilhasoft.support.task;
 
 /**
  * Created by johndalton on 03/12/14.
