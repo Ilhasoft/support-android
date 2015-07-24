@@ -13,11 +13,20 @@ import android.view.WindowManager;
 public class StatusBarDesigner {
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    public void setStatusBarColor(Activity activity, @ColorRes int color) {
+    public void setStatusBarColorById(Activity activity, @ColorRes int color) {
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Window window = activity.getWindow();
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
             window.setStatusBarColor(activity.getResources().getColor(color));
+        }
+    }
+
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+    public void setStatusBarColor(Activity activity, int color) {
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            Window window = activity.getWindow();
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.setStatusBarColor(color);
         }
     }
 
