@@ -14,7 +14,7 @@ public class Preferences {
 
     public Preferences(Context context, String prefix) {
         this.prefix = prefix;
-        preferences = context.getSharedPreferences(PREFS_NAME, Context.MODE_MULTI_PROCESS);
+        preferences = context.getApplicationContext().getSharedPreferences(PREFS_NAME, Context.MODE_MULTI_PROCESS);
     }
 
     public Preferences(Context context) {
@@ -66,7 +66,7 @@ public class Preferences {
 			editor.putString(key, (String) value);
 		}
 
-		editor.apply();
+		editor.commit();
 	}
 
 }
