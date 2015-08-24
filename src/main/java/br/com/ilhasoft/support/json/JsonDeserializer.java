@@ -19,13 +19,23 @@ public class JsonDeserializer <Model> {
     private static final String DATA_MEMBER = "data";
     private static final String RESULT_MEMBER = "result";
 
-    private final Gson gson;
+    private Gson gson;
     private final JsonObject jsonObject;
 
     public JsonDeserializer(String json) {
         gson = new GsonBuilder().excludeFieldsWithModifiers(Modifier.TRANSIENT)
-                                .excludeFieldsWithoutExposeAnnotation().create();
+                                .create();
         jsonObject = getRootJsonObject(json);
+    }
+
+    public void setDateFormat(String style) {
+        gson = new GsonBuilder().excludeFieldsWithModifiers(Modifier.TRANSIENT)
+                .setDateFormat(style)
+                .create();
+    }
+
+    public Model get(Class<Model> classParam) {
+        return gson.fromJson(jsonObject, classParam);
     }
 
     public Model getData(Class<Model> classParam) {
