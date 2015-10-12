@@ -1,24 +1,29 @@
 package br.com.ilhasoft.support.tool.bitmap;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 import android.graphics.Rect;
 import android.graphics.RectF;
-import android.graphics.drawable.BitmapDrawable;
+import android.media.ExifInterface;
 import android.net.Uri;
 import android.os.Environment;
 import android.os.ParcelFileDescriptor;
+import android.provider.MediaStore;
 import android.util.TypedValue;
 
 import java.io.File;
 import java.io.FileDescriptor;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 
 /**
  * Created by johndalton on 05/08/14.
@@ -80,9 +85,29 @@ public class BitmapHelper {
         return output;
     }
 
-    public static File createImageFile() throws IOException {
-        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+    public static Bitmap rotateBitmapIfNeeded(Bitmap bitmap, File pictureFile) throws IOException {
+        ExifInterface exifInterface = new ExifInterface(pictureFile.getPath());
+        int orientation = exifInterface.getAttributeInt(ExifInterface.TAG_ORIENTATION, ExifInterface.ORIENTATION_NORMAL);
 
+        switch(orientation) {
+            case ExifInterface.ORIENTATION_ROTATE_90:
+                return rotateBitmap(bitmap, 90);
+            case ExifInterface.ORIENTATION_ROTATE_180:
+                return rotateBitmap(bitmap, 180);
+            case ExifInterface.ORIENTATION_ROTATE_270:
+                return rotateBitmap(bitmap, 270);
+        }
+        return bitmap;
+    }
+
+    public static Bitmap rotateBitmap(Bitmap source, float angle) {
+        Matrix matrix = new Matrix();
+        matrix.postRotate(angle);
+        return Bitmap.createBitmap(source, 0, 0, source.getWidth(), source.getHeight(), matrix, true);
+    }
+
+    public static File createImageFile() throws IOException {
+        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.US).format(new Date());
         String imageFileName = "JPEG_" + timeStamp + "_";
 
         File storageDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
