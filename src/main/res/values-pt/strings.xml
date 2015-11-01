@@ -1,6 +1,4 @@
 <resources>
-    <string name="app_name">IlhaAndroid</string>
-
     <string name="message_youtube_link">Insira o link do Youtube abaixo:</string>
     <string name="error_empty_link">Favor escolher um link válido do Youtube</string>
     <string name="hint_youtube_link">Link do vídeo</string>

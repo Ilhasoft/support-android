@@ -69,6 +69,11 @@ public class MediaSelector {
         selectImage(onMediaSelectedFragmentListener);
     }
 
+    public void selectYoutubeVideo(Fragment fragment) {
+        OnMediaSelectedFragmentListener onMediaSelectedFragmentListener = new OnMediaSelectedFragmentListener(fragment);
+        onMediaSelectedFragmentListener.onMediaSelected(POSITION_YOUTUBE);
+    }
+
     public void onActivityResult(Fragment fragment, OnLoadLocalMediaListener onLoadLocalMediaListener
             , int requestCode, int resultCode, Intent data) {
         if(resultCode == Activity.RESULT_OK) {

@@ -1,6 +1,4 @@
 <resources>
-    <string name="app_name">IlhaAndroid</string>
-
     <string name="message_youtube_link">Put the Youtube link below:</string>
     <string name="error_empty_link">You need to provide a valid youtube link</string>
     <string name="hint_youtube_link">Youtube link</string>
