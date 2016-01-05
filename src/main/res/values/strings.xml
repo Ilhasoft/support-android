@@ -1,3 +1,22 @@
 <resources>
-    <string name="app_name">IlhaAndroid</string>
+    <string name="message_youtube_link">Put the Youtube link below:</string>
+    <string name="error_empty_link">You need to provide a valid youtube link</string>
+    <string name="hint_youtube_link">Youtube link</string>
+
+    <string name="cancel_dialog_button">Cancel</string>
+    <string name="confirm_neutral_dialog_button">Ok</string>
+
+    <string name="title_media_source">Choose a media source:</string>
+    <string name="error_take_picture">An error occurred, take another picture</string>
+
+    <string-array name="image_sources">
+        <item>Gallery</item>
+        <item>Camera</item>
+    </string-array>
+
+    <string-array name="media_sources">
+        <item>Gallery</item>
+        <item>Camera</item>
+        <item>Youtube</item>
+    </string-array>
 </resources>

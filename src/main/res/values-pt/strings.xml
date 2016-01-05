@@ -1,0 +1,22 @@
+<resources>
+    <string name="message_youtube_link">Insira o link do Youtube abaixo:</string>
+    <string name="error_empty_link">Favor escolher um link válido do Youtube</string>
+    <string name="hint_youtube_link">Link do vídeo</string>
+
+    <string name="cancel_dialog_button">Cancelar</string>
+    <string name="confirm_neutral_dialog_button">Ok</string>
+
+    <string name="title_media_source">Onde você quer pegar a foto:</string>
+    <string name="error_take_picture">Ocorreu um erro, tente com outra imagem</string>
+
+    <string-array name="image_sources">
+        <item>Galeria</item>
+        <item>Câmera</item>
+    </string-array>
+
+    <string-array name="media_sources">
+        <item>Galeria</item>
+        <item>Câmera</item>
+        <item>Youtube</item>
+    </string-array>
+</resources>
