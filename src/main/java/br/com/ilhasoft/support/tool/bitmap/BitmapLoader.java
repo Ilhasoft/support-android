@@ -25,6 +25,15 @@ public class BitmapLoader {
         }
     }
 
+    public void loadBitmapByVideoPath(Uri uri, ImageView imageView, int size) {
+        if(cancelPotentialWork(uri.getPath(), imageView)) {
+            final VideoUriBitmapTask task = new VideoUriBitmapTask(context, imageView, size);
+            final AsyncDrawable<VideoUriBitmapTask> asyncDrawable = new AsyncDrawable<>(context.getResources(), null, task);
+            imageView.setImageDrawable(asyncDrawable);
+            task.execute(uri);
+        }
+    }
+
     public void loadBitmapByUri(Uri uri, ImageView imageView, int size) {
         if (cancelPotentialWork(uri.getPath(), imageView)) {
             final BitmapUriWorkerTask task = new BitmapUriWorkerTask(context, imageView, size);

@@ -3,6 +3,7 @@ package br.com.ilhasoft.support.tool.bitmap;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
+import android.support.annotation.NonNull;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -23,6 +24,11 @@ public class BitmapCompressor {
         bitmap = scaleBitmap(bitmap);
         bitmap = BitmapHelper.rotateBitmapIfNeeded(bitmap, pictureFile);
 
+        return setBitmapToNewFileCompressed(bitmap, createdFile);
+    }
+
+    @NonNull
+    public File setBitmapToNewFileCompressed(Bitmap bitmap, File createdFile) throws IOException {
         FileOutputStream fileOutputStream = new FileOutputStream(createdFile);
         bitmap.compress(Bitmap.CompressFormat.JPEG, 70, fileOutputStream);
 
