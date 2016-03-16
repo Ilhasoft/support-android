@@ -3,10 +3,9 @@ package br.com.ilhasoft.support.tool.bitmap;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.net.Uri;
-import android.os.AsyncTask;
 import android.widget.ImageView;
 
-import java.lang.ref.WeakReference;
+import java.io.File;
 
 /**
  * Created by johndalton on 12/07/14.
@@ -24,6 +23,13 @@ public class BitmapUriWorkerTask extends BitmapWorkerTask<Uri> {
     protected Bitmap doInBackground(Uri... params) {
         Uri uri = params[0];
         pathName = uri.getPath();
-        return bitmapDecoder.decodeSampledBitmapFromUri(context, uri, size, size);
+
+        IOManager ioManager = new IOManager(context);
+        Bitmap bitmapDecoded = bitmapDecoder.decodeSampledBitmapFromUri(context, uri, size, size);
+        try {
+            return BitmapHelper.rotateBitmapIfNeeded(bitmapDecoded, new File(ioManager.getFilePathForUri(uri)));
+        } catch (Exception exception) {
+            return bitmapDecoded;
+        }
     }
 }
