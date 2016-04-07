@@ -44,6 +44,12 @@ public class IOManager {
                 ? mimeType.getMimeTypeFromExtension(extension.substring(1)) : null;
     }
 
+    public float getFileSizeInMb(File file) {
+        float fileSizeInBytes = file.length();
+        float fileSizeInKB = fileSizeInBytes / 1024;
+        return fileSizeInKB / 1024;
+    }
+
     private String fileExt(String url) {
         if (url.contains("?"))
             url = url.substring(0, url.indexOf("?"));
