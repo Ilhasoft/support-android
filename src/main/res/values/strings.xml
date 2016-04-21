@@ -9,6 +9,10 @@
     <string name="title_media_source">Choose a media source:</string>
     <string name="error_take_picture">An error occurred, take another picture</string>
 
+    <string name="prompt_file_upload">Select a file to upload</string>
+    <string name="error_get_file">An error occurred, get other file</string>
+    <string name="error_message_permission_external">It\'s necessary to give permissions to this action.</string>
+
     <string-array name="image_sources">
         <item>Gallery</item>
         <item>Camera</item>

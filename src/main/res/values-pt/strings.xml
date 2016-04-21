@@ -9,6 +9,10 @@
     <string name="title_media_source">Onde você quer pegar a foto:</string>
     <string name="error_take_picture">Ocorreu um erro, tente com outra imagem</string>
 
+    <string name="prompt_file_upload">Selecione um arquivo</string>
+    <string name="error_get_file">Ocorreu um erro, tente com outro arquivo</string>
+    <string name="error_message_permission_external">É necessário dar permissão para essa ação.</string>
+
     <string-array name="image_sources">
         <item>Galeria</item>
         <item>Câmera</item>
