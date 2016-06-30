@@ -1,6 +1,7 @@
 package br.com.ilhasoft.support.tool;
 
 import android.support.design.widget.TextInputLayout;
+import android.text.Editable;
 import android.util.Patterns;
 import android.widget.EditText;
 
@@ -16,7 +17,8 @@ import java.util.regex.Pattern;
 public class EditTextValidator {
 
     public boolean validateSize(EditText editText, int minSize, String errorMessage) {
-        if (editText.getText() != null && !editText.getText().toString().equals("") && editText.getText().toString().length() > minSize) {
+        Editable text = editText.getText();
+        if (text != null && !text.toString().trim().isEmpty() && text.toString().trim().length() > minSize) {
             setError(editText, null);
             return true;
         } else {
