@@ -39,7 +39,7 @@ public class DatePickerFragment extends DialogFragment {
         int year = calendar.get(Calendar.YEAR);
         int month = calendar.get(Calendar.MONTH);
         int day = calendar.get(Calendar.DAY_OF_MONTH);
-        maxDate = getArguments().getLong(EXTRA_MAX_DATE, INVALID_VALUD);
+        maxDate = getArguments() != null ? getArguments().getLong(EXTRA_MAX_DATE, INVALID_VALUD) : INVALID_VALUD;
 
         DatePickerDialog datePickerDialog = new DatePickerDialog(getActivity(), onDateSetListener, year, month, day);
         setMaxDate(datePickerDialog);
