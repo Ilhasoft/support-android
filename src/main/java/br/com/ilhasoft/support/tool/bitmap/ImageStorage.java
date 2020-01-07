@@ -2,8 +2,9 @@ package br.com.ilhasoft.support.tool.bitmap;
 
 import android.graphics.Bitmap;
 import android.os.Environment;
-import android.support.annotation.NonNull;
 import android.util.Log;
+
+import androidx.annotation.NonNull;
 
 import java.io.File;
 import java.io.FileOutputStream;

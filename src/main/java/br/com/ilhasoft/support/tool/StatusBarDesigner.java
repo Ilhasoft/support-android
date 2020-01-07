@@ -3,9 +3,10 @@ package br.com.ilhasoft.support.tool;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.os.Build;
-import android.support.annotation.ColorRes;
 import android.view.Window;
 import android.view.WindowManager;
+
+import androidx.annotation.ColorRes;
 
 /**
  * Created by johncordeiro on 7/22/15.

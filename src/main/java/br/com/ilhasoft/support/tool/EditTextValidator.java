@@ -1,13 +1,13 @@
 package br.com.ilhasoft.support.tool;
 
-import android.support.design.widget.TextInputLayout;
 import android.text.Editable;
 import android.util.Patterns;
 import android.widget.EditText;
 
+import com.google.android.material.textfield.TextInputLayout;
+
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.Locale;
 import java.util.regex.Pattern;
 

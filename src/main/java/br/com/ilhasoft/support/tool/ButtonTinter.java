@@ -2,11 +2,10 @@ package br.com.ilhasoft.support.tool;
 
 import android.content.res.ColorStateList;
 import android.os.Build;
-import android.support.v4.view.ViewCompat;
-import android.support.v7.widget.AppCompatButton;
-import android.support.v7.widget.AppCompatImageButton;
-import android.widget.Button;
 import android.widget.ImageButton;
+
+import androidx.appcompat.widget.AppCompatImageButton;
+import androidx.core.view.ViewCompat;
 
 /**
  * Created by john-mac on 2/5/16.

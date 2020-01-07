@@ -1,9 +1,10 @@
 package br.com.ilhasoft.support.widget;
 
-import android.support.v4.view.ViewCompat;
-import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.core.view.ViewCompat;
+import androidx.viewpager.widget.ViewPager;
 
 import java.util.ArrayList;
 import java.util.List;

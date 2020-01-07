@@ -2,8 +2,9 @@ package br.com.ilhasoft.support.tool;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.support.annotation.DrawableRes;
 import android.util.TypedValue;
+
+import androidx.annotation.DrawableRes;
 
 /**
  * Created by johncordeiro on 7/23/15.

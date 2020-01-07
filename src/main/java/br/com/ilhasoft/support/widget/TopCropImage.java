@@ -2,7 +2,6 @@ package br.com.ilhasoft.support.widget;
 
 import android.content.Context;
 import android.graphics.Matrix;
-import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
